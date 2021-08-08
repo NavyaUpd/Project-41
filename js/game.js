@@ -109,11 +109,15 @@ class Game{
                             if(fruitGroup.get(i).isTouching(player1)){
                                 allPlayers.player1.score += 1;
                                 fruitGroup.get(i).destroy();
+                                player.score = allPlayers.player1.score;
+                                player.update();
                                 /*player.score = allPlayers.player1.score;
                                 player.update();*/
                             }if(fruitGroup.get(i).isTouching(player2)){
                                 allPlayers.player2.score += 1;
                                 fruitGroup.get(i).destroy();
+                                player.score = allPlayers.player2.score;
+                                player.update();
                                 /*player.score = allPlayers.player2.score;
                                 player.update();*/
                             }
